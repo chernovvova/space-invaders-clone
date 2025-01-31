@@ -1,12 +1,17 @@
+baseWidth = 480
+baseHeight = 270
+
+scaleX, scaleY = 1, 1
+
 function love.conf(t) 
-    t.window.title = "Space invaders"      -- Заголовок окна (строка)
+    t.window.title = "Space invaders"   -- Заголовок окна (строка)
     t.window.icon = nil                 -- Путь до файла картинки, которая будет использоваться в качестве иконки окна (строка)
-    t.window.width = 800                -- Ширина окна (число)
-    t.window.height = 600               -- Высота окна (число)
+    t.window.width = baseWidth          -- Ширина окна (число)
+    t.window.height = baseHeight        -- Высота окна (число)
     t.window.borderless = false         -- Убрать рамки у окна (логическое)
-    t.window.resizable = false          -- Разрешить пользователю изменять размер окна (логическое)
-    t.window.minwidth = 1               -- Минимально возможная ширина окна (число)
-    t.window.minheight = 1              -- Минимально возможная высота окна (число)
+    t.window.resizable = true           -- Разрешить пользователю изменять размер окна (логическое)
+    t.window.minwidth = 400             -- Минимально возможная ширина окна (число)
+    t.window.minheight = 300            -- Минимально возможная высота окна (число)
     t.window.fullscreen = false         -- Включить полноэкранный режим (логическое)
     t.window.fullscreentype = "desktop" -- Выбор полноэкранного режима "desktop" или "exclusive" (строка)
     t.window.vsync = 1                  -- Использовать вертикальную синхронизацию (число)
