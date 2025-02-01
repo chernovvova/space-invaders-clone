@@ -2,8 +2,13 @@ require 'loader'
 
 function love.load()
     love.graphics.setDefaultFilter('nearest', 'nearest')
+    
+    local windowWidth = love.graphics.getWidth()
+    local windowHeight = love.graphics.getHeight()
 
-    resize(3, 3)
+    scaleX = windowWidth / baseWidth
+    scaleY = windowHeight / baseHeight
+
     loadGame()
 
     Gamestate.registerEvents()
@@ -11,20 +16,19 @@ function love.load()
 end
 
 function love.update(dt)
-    GameState:update(dt)
+    Gamestate:update(dt)
 end
 
 function love.draw()
+    love.graphics.push()
+    love.graphics.scale(scaleX, scaleY)
+
     GameState:draw()
+
+    love.graphics.pop()
 end
 
 function love.resize(w, h)
     scaleX = w / baseWidth
     scaleY = h / baseHeight
-    love.window.setMode(scaleX * baseWidth, scaleY * baseHeight)
-end
-
-function resize(sx, sy)
-    love.window.setMode(sx * baseWidth, sy * baseHeight)
-    scaleX, scaleY = sx, sy
 end
