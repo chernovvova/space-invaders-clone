@@ -1,8 +1,5 @@
 MenuState = {}
 
-function MenuState:enter(previous)
-end
-
 function MenuState:update(dt)
 
 end

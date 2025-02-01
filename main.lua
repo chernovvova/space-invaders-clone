@@ -23,7 +23,7 @@ function love.draw()
     love.graphics.push()
     love.graphics.scale(scaleX, scaleY)
 
-    GameState:draw()
+    Gamestate:draw()
 
     love.graphics.pop()
 end

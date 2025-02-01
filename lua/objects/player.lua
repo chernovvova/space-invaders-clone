@@ -9,13 +9,13 @@ end
 
 function Player:update(dt)
     if love.keyboard.isDown('right') then
-        player.x = player.x + player.velocity * dt
+        self.x = self.x + self.velocity * dt
     end
     if love.keyboard.isDown('left') then
-        player.x = player.x - player.velocity * dt
+        self.x = self.x - self.velocity * dt
     end
 end
 
 function Player:draw()
-    love.graphics.draw(player.sprite, player.x, player.y, nil, 5, 5)
+    love.graphics.draw(self.sprite, self.x, self.y, nil, 5, 5)
 end
