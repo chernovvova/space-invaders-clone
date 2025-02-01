@@ -16,7 +16,7 @@ function love.load()
 end
 
 function love.update(dt)
-    Gamestate:update(dt)
+    Gamestate.current():update(dt)
 end
 
 function love.draw()
