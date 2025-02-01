@@ -17,3 +17,9 @@ function requireFiles(files)
         require(file)
     end
 end
+
+function drawCenteredText(text)
+    local font = love.graphics.getFont()
+	local textWidth = font:getWidth(text)
+	love.graphics.print(text, love.graphics.getWidth() / 2 - textWidth, love.graphics.getHeight() / 2, 0, 2, 2)
+end
