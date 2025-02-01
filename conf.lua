@@ -1,5 +1,5 @@
-baseWidth = 480
-baseHeight = 270
+baseWidth = 800
+baseHeight = 600
 
 scaleX, scaleY = 1, 1
 
